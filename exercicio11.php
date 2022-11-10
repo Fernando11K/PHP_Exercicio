@@ -25,7 +25,7 @@
 
         <div class="mb-3"> 
             <label for=""> Digite a altura: </label>
-            <input class="form-control" type="number" min="0" max="3" step="0.10" name="altura" id=""/>
+            <input class="form-control" type="number" min="0" max="3" step=".01" name="altura" id=""/>
         </div>
 
          <input class="btn btn-primary w-100" type="submit" value="Calcular">
