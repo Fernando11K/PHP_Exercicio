@@ -16,41 +16,47 @@
 </head>
 
 <body class="container">
-    <p>12.Tendo como dado de entrada a altura (h) de uma pessoa, construa um script que calcule seu peso ideal, utilizando as seguintes fórmulas:
+    <p>12.Tendo como dado de entrada a altura (h) de uma pessoa, construa um script que calcule seu peso ideal,
+        utilizando as seguintes fórmulas:
         •Para homens: (72.7\*h) - 58
 
         •Para mulheres: (62.1\*h) – 44.7
-</p>
+    </p>
 
-    <form class="form-control" action="exercicio6.php" method="get">
+    <form class="form-control" action="exercicio12.php" method="get">
 
 
-        <div class="mb-3"> 
-            <label for=""> Digite o tamanho do lado do quadrado: </label>
-            <input class="form-control" type="text" name="lado" id=""/>
+        <div class="mb-3 ">
+            <label for="" class="form-label ">Sexo:</label>
+            <select class="form-select form-select-lg bg-secondary bg-opacity-25 " name="sexo" id="">
+
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for=""> Digite a altura: </label>
+            <input class="form-control" type="number" min="0" max="3" step=".01" name="altura" id="" />
         </div>
 
-         <input class="btn btn-primary w-100" type="submit" value="Calcular">
+        <input class="btn btn-primary w-100" type="submit" value="Calcular">
     </form>
 
-    <?php 
+    <?php
 
-    // entrada
-        $lado = $_GET["lado"];
-       
-       
 
-      
+    $dados = $_GET;
+    $altura = $dados["altura"];
+    $sexo = $dados["sexo"];
+    print_r($dados);
 
-    // processamento
 
-    $areaQuadrado = $lado ** 2;
-    $dobroAreaQuadrado = $areaQuadrado * 2;
 
-    // subtração, multiplicação e divisão
+    $pesoIdeal = $sexo == "masculino" ? $pesoIdealMasculino = (72.7 * $altura) - 58 : $pesoIdealFemino = (62.1 * $altura) - 44.7;
 
-    // saída
-        echo "<div class='alert alert-primary text-center'>Resultado do dobro da Área do Quadrado: ".$dobroAreaQuadrado;
+
+    echo "<div class='alert alert-primary text-center'>Peso ideal: " . $pesoIdeal;
 
     ?>
 

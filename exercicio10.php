@@ -18,52 +18,52 @@
 <body class="container">
     <p>10.Faça um script que peça 2 números inteiros e um número real.
         Calcule e mostre:
-            •o produto do dobro do primeiro com metade do segundo .
-            •a soma do triplo do primeiro com o terceiro.
-            •o terceiro elevado ao cubo.</p>
+        •o produto do dobro do primeiro com metade do segundo .
+        •a soma do triplo do primeiro com o terceiro.
+        •o terceiro elevado ao cubo.</p>
 
     <form class="form-control" action="exercicio10.php" method="get">
 
 
-        <div class="mb-3"> 
+        <div class="mb-3">
             <label for=""> Digite um número inteiro</label>
-            <input class="form-control" type="text" name="inteiro1" id=""/>
+            <input class="form-control" type="text" name="inteiro1" id="" />
         </div>
 
-        <div class="mb-3"> 
+        <div class="mb-3">
             <label for=""> Digite um número inteiro </label>
-            <input class="form-control" type="text" name="inteiro2" id=""/>
+            <input class="form-control" type="text" name="inteiro2" id="" />
         </div>
 
-        <div class="mb-3"> 
+        <div class="mb-3">
             <label for=""> Digite um número real </label>
-            <input class="form-control" type="text" name="real" id=""/>
+            <input class="form-control" type="text" name="real" id="" />
         </div>
 
-         <input class="btn btn-primary w-100" type="submit" value="Calcular">
+        <input class="btn btn-primary w-100" type="submit" value="Calcular">
     </form>
-   
-    <?php 
+
+    <?php
 
     // entrada
-        $inteiro1 = $_GET["inteiro1"];
-        $inteiro2 = $_GET["inteiro2"];
-        $real = $_GET["real"];
-        
-       
-       
-       
+    $inteiro1 = $_GET["inteiro1"];
+    $inteiro2 = $_GET["inteiro2"];
+    $real = $_GET["real"];
+
+
+
+
     // processamento
-
-    $produto = $inteiro1 * ($inteiro2*0.5);
-    $soma = ($inteiro1 * 3) + $real; 
-    $cubo = $real**3;
+    
+    $produto = $inteiro1 * ($inteiro2 * 0.5);
+    $soma = ($inteiro1 * 3) + $real;
+    $cubo = $real ** 3;
     // subtração, multiplicação e divisão
-
+    
     // saída
-        echo "<div class='alert alert-primary text-center'>O produto do dobro do primeiro com metade do segundo".$produto;
-        echo "<div class='alert alert-primary text-center'>A soma do triplo do primeiro com o terceiro.".$soma;
-        echo "<div class='alert alert-primary text-center'>O terceiro elevado ao cubo..".$cubo;
+    echo "<div class='alert alert-primary text-center'>O produto do dobro do primeiro com metade do segundo: " . $produto;
+    echo "<div class='alert alert-primary text-center'>A soma do triplo do primeiro com o terceiro: " . $soma;
+    echo "<div class='alert alert-primary text-center'>O terceiro elevado ao cubo: " . $cubo;
 
     ?>
 
